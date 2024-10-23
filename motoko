@@ -1,0 +1,42 @@
+actor Calculator{
+var cell: Int = 0;
+
+//sum of the cell and input
+public func Adding(s:Int) : async Int{
+  cell += s;
+  cell
+};
+
+//subtracts input from the cell
+public func Subtraction(s:Int) : async Int{
+  cell -= s;
+  cell
+};
+
+
+//multiplies input with the cell
+public func Multiplication(s:Int) : async ?Int{
+  if(s==0){
+    null
+  }else{
+  cell *= s;
+  ?cell
+  }
+};
+
+//divides the cell into input
+public func Division(s:Int) : async ?Int{
+  if(s==0){
+    null
+  }else{
+  cell /= s;
+  ?cell
+  }
+};
+
+//Clears and sets the cell on 0zero
+public func Cleanse() : async Int{
+  cell := 0;
+  cell
+};
+};
